@@ -12,6 +12,9 @@
 import { getPrimeFactorOfNumber } from "../core/primeFactors";
 
 describe("The Prime Factorizer", ()=>{
+    it("returns one when number is one",()=>{
+        expect(getPrimeFactorOfNumber(1)).toEqual([1]);
+    });
     it("returns the same prime number",()=>{
         expect(getPrimeFactorOfNumber(2)).toEqual([2]);
         expect(getPrimeFactorOfNumber(3)).toEqual([3]);
