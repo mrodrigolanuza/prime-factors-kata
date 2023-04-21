@@ -23,7 +23,7 @@ function getPrimeFactorOfNumber(number:number){
     const remainder = number / factor;
     
     if(remainder > 1)
-        return primeFactors.concat(factor);
+        return primeFactors.concat(getPrimeFactorOfNumber(remainder));
 
     return primeFactors;
 }
