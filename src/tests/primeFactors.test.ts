@@ -16,5 +16,6 @@ describe("The Prime Factorizer", ()=>{
 });
 
 function getPrimeFactorOfNumber(number:number){
-    return [2];
+    const primeFactors = [2];
+    return primeFactors;
 }
