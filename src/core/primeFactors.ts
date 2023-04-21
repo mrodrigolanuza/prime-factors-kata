@@ -5,11 +5,11 @@ export function getPrimeFactorOfNumber(number:number){
         factor++;
     }
         
-    const primeFactors = [factor];
     const remainder = number / factor;
     
-    if(remainder > 1)
-        return primeFactors.concat(getPrimeFactorOfNumber(remainder));
-
-    return primeFactors;
+    if(remainder <= 1){
+        return [factor];
+    }
+    
+    return [factor].concat(getPrimeFactorOfNumber(remainder));
 }
