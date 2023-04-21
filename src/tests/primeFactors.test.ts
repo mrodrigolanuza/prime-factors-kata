@@ -1,12 +1,12 @@
 /*
 - 2 ⇒ [2]
-- 2 * 2 ⇒ [2,2]
-- 2 * 2 * 2 ⇒ [2,2,2]
+- 4 = 2 * 2 ⇒ [2,2]
+- 8 = 2 * 2 * 2 ⇒ [2,2,2]
 - 3 ⇒ [3]
-- 3 * 3 ⇒ [3,3]
-- 3 * 2 ⇒ [2,3]
-- 5 * 5 ⇒ [5,5]
-- 5 * 7 * 11 * 3 ⇒ [3,5,7,11]
+- 9 = 3 * 3 ⇒ [3,3]
+- 6 = 3 * 2 ⇒ [2,3]
+- 25 = 5 * 5 ⇒ [5,5]
+- 1155 = 5 * 7 * 11 * 3 ⇒ [3,5,7,11]
 */
 
 describe("The Prime Factorizer", ()=>{
@@ -18,15 +18,17 @@ describe("The Prime Factorizer", ()=>{
         expect(getPrimeFactorOfNumber(9)).toEqual([3,3]);
         expect(getPrimeFactorOfNumber(6)).toEqual([2,3]);
         expect(getPrimeFactorOfNumber(25)).toEqual([5,5]);
+        expect(getPrimeFactorOfNumber(1155)).toEqual([3,5,7,11]);
     });
 });
 
 function getPrimeFactorOfNumber(number:number){
     let factor = 2;
 
-    if(number % factor != 0)
-        factor = 3;
-
+    while(number % factor != 0){
+        factor++;
+    }
+        
     const primeFactors = [factor];
     const remainder = number / factor;
     
