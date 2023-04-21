@@ -19,7 +19,11 @@ describe("The Prime Factorizer", ()=>{
 });
 
 function getPrimeFactorOfNumber(number:number){
-    const factor = 2;
+    let factor = 2;
+
+    if(number % factor != 0)
+        factor = 3;
+
     const primeFactors = [factor];
     const remainder = number / factor;
     
