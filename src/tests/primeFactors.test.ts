@@ -17,10 +17,12 @@ describe("The Prime Factorizer", ()=>{
 });
 
 function getPrimeFactorOfNumber(number:number){
-    const primeFactors = [2];
+    const factor = 2;
+    const primeFactors = [factor];
+    const remainder = number / factor;
     
-    if(number/2 > 1)
-        primeFactors.push(2);
+    if(remainder > 1)
+        return primeFactors.concat(factor);
 
     return primeFactors;
 }
