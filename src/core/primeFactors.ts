@@ -1,15 +1,14 @@
 export function getPrimeFactorOfNumber(number:number){
-    let factor = 2;
+    const prime = findSmallestPrime(number);
+    const remainder = number / prime;
+    return remainder <= 1 ? [prime] : [prime].concat(getPrimeFactorOfNumber(remainder));
+}
 
+function findSmallestPrime(number:number){
+    let factor = 2;
     while(number % factor != 0){
         factor++;
     }
-        
-    const remainder = number / factor;
-    
-    if(remainder <= 1){
-        return [factor];
-    }
-    
-    return [factor].concat(getPrimeFactorOfNumber(remainder));
+    return factor;
 }
+
