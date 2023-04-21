@@ -12,6 +12,7 @@
 describe("The Prime Factorizer", ()=>{
     it("finds the prime sequence of a particular number",()=>{
         expect(getPrimeFactorOfNumber(2)).toEqual([2]);
+        expect(getPrimeFactorOfNumber(4)).toEqual([2,2]);
     });
 });
 
