@@ -18,5 +18,9 @@ describe("The Prime Factorizer", ()=>{
 
 function getPrimeFactorOfNumber(number:number){
     const primeFactors = [2];
+    
+    if(number/2 > 1)
+        primeFactors.push(2);
+
     return primeFactors;
 }
