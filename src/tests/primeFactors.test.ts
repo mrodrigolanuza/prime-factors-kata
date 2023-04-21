@@ -14,6 +14,7 @@ describe("The Prime Factorizer", ()=>{
         expect(getPrimeFactorOfNumber(2)).toEqual([2]);
         expect(getPrimeFactorOfNumber(4)).toEqual([2,2]);
         expect(getPrimeFactorOfNumber(8)).toEqual([2,2,2]);
+        expect(getPrimeFactorOfNumber(3)).toEqual([3]);
     });
 });
 
