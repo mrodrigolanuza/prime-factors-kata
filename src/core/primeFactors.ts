@@ -5,6 +5,9 @@ export function getPrimeFactorOfNumber(number:number){
 }
 
 function findSmallestPrime(number:number){
+    if(number <= 0)
+        throw Error("Must be a number greater than zero");
+    
     if(number === 1)
         return 1;
     

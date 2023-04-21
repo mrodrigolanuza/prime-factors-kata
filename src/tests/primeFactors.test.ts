@@ -32,5 +32,8 @@ describe("The Prime Factorizer", ()=>{
         expect(getPrimeFactorOfNumber(1155)).toEqual([3,5,7,11]);
         expect(getPrimeFactorOfNumber(119239)).toEqual([43,47,59]);
     });
+    it("only accepts positive numbers",()=>{
+        expect(() => getPrimeFactorOfNumber(-1)).toThrow();
+    });
 });
 
