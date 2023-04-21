@@ -8,7 +8,7 @@ Para ello, crearemos una función _primeFactors_, a la que le pasamos el número
 Desarrollo con TDD y aplicando la premisa de prioridad de transformación, sin ser estrictos en los pasos, pero sí en el orden. 
 Para conseguir el éxito en la generalización progresiva es fundamental escoger los ejemplos acertados en el orden adecuado. 
 
-Ejemplos que puedes ver en la diapositiva. 
+Ejemplos para trabajar en los tests: 
 
 ```
 - 2 ⇒ [2]
